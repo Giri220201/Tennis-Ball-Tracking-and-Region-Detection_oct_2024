@@ -10,7 +10,7 @@ from pathlib import Path
 pathlib.PosixPath = pathlib.WindowsPath
 
 # Set your model and repository paths
-repo_path = 'C:\\Users\\acer\\Downloads\\project\\yolov5'
+repo_path = 'https://github.com/Giri220201/yolov5'
 model_path = 'C:\\Users\\acer\\Downloads\\project\\yolov5\\best (2).pt'
 
 # Load the custom YOLOv5 model
