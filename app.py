@@ -11,7 +11,7 @@ pathlib.PosixPath = pathlib.WindowsPath
 
 # Set your model and repository paths
 repo_path = 'https://github.com/Giri220201/yolov5'
-model_path = 'https://github.com/Giri220201/yolov5/blob/master/best%20(2).pt'
+model_path = 'https://raw.githubusercontent.com/Giri220201/yolov5/master/best%20(2).pt'
 
 # Load the custom YOLOv5 model
 model = torch.hub.load(repo_path, 'custom', path=model_path, source='github', force_reload=True)
