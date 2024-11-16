@@ -14,7 +14,7 @@ repo_path = 'Giri220201/yolov5'  # Just the user/repo part
 model_path = 'best (2).pt'  # The file path in the repo
 
 # Load the custom YOLOv5 model
-model = torch.hub.load(repo_path, 'custom', path=best (2).pt, source='github', force_reload=True)
+model = torch.hub.load(repo_path, 'custom', path= 'best (2).pt', source='github', force_reload=True)
 
 
 # Set up custom styles for buttons and progress bar
