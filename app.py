@@ -10,11 +10,11 @@ from pathlib import Path
 pathlib.PosixPath = pathlib.WindowsPath
 
 # Set your model and repository paths
-repo_path = 'Giri220201/yolov5'  # Just the user/repo part
-model_path = 'best (2).pt'  # The file path in the repo
+repo_path = ''https://github.com/Giri220201/yolov5''  # Just the user/repo part
+model_path = 'yolov5/best (2).pt'  # The file path in the repo
 
 # Load the custom YOLOv5 model
-model = torch.hub.load(repo_path, 'custom', path= 'best (2).pt', source='github', force_reload=True)
+model = torch.hub.load(repo_path, 'custom', path= 'yolov5/best (2).pt', source='github', force_reload=True)
 
 
 # Set up custom styles for buttons and progress bar
