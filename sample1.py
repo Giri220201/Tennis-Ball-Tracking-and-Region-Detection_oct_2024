@@ -18,15 +18,6 @@ model = torch.hub.load(repo_path, 'custom', path=model_path, source='local', for
 st.title("🎾 Tennis Game Tracking")
 
 # Download and load the YOLOv5 model
-'''
-#try:
-    st.info("Downloading model...")
-    model_path = download_model(model_url)  # Download the model file from GitHub
-    model = torch.hub.load(repo_path, 'custom', path=model_path, source='github')
-    st.success("Model loaded successfully!")
-except Exception as e:
-    st.error(f"Error loading model: {str(e)}")
-    st.stop()'''
 
 # Custom styles for buttons and progress bar
 st.markdown(
