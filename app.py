@@ -4,19 +4,41 @@ import cv2
 import tempfile
 import numpy as np
 import pathlib
+import requests
 from pathlib import Path
 
 # Fix for Windows path compatibility
 pathlib.PosixPath = pathlib.WindowsPath
 
+# Function to download the model file from GitHub
+def download_model(url):
+    response = requests.get(url)
+    if response.status_code == 200:
+        # Create a temporary file to store the model
+        temp_model = tempfile.NamedTemporaryFile(delete=False, suffix='.pt')
+        temp_model.write(response.content)
+        temp_model.close()
+        return temp_model.name
+    else:
+        raise Exception(f"Failed to download the model. Status code: {response.status_code}")
+
 # Set your model and repository paths
-repo_path = 'https://github.com/Giri220201/yolov5'
-model_path = 'yolov5/best (2).pt'
+repo_path = 'Giri220201/yolov5'  # GitHub repository for YOLOv5
+model_url = 'https://github.com/Giri220201/yolov5/raw/refs/heads/master/best%20(2).pt'
 
-# Load the custom YOLOv5 model
-model = torch.hub.load(repo_path, 'custom', path=model_path, source='local', force_reload=True)
+st.title("🎾 Tennis Game Tracking")
 
-# Set up custom styles for buttons and progress bar
+# Download and load the YOLOv5 model
+try:
+    st.info("Downloading model...")
+    model_path = download_model(model_url)  # Download the model file from GitHub
+    model = torch.hub.load(repo_path, 'custom', path=model_path, source='github')
+    st.success("Model loaded successfully!")
+except Exception as e:
+    st.error(f"Error loading model: {str(e)}")
+    st.stop()
+
+# Custom styles for buttons and progress bar
 st.markdown(
     """
     <style>
@@ -41,9 +63,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Title for the app
-st.title("🎾 Tennis Game Tracking")
-
 # Create two columns for layout
 col1, col2 = st.columns([3, 1])
 
@@ -55,7 +74,6 @@ with col1:
         temp_video = tempfile.NamedTemporaryFile(delete=False)
         temp_video.write(video_file.read())
 
-        # Preview button to show the video
         if st.button("Preview Video"):
             st.video(temp_video.name)
         else:
@@ -66,8 +84,6 @@ with col1:
 # Download button in the second column
 with col2:
     st.subheader("Download Processed Video")
-
-    # Process the video and provide download link
     if video_file is not None and st.button("Download Output"):
         st.write("Processing and preparing download...")
 
@@ -102,4 +118,4 @@ with col2:
                 mime="video/mp4"
             )
 
-st.write("Ensure 'best.pt' is in the same directory or provide the correct path in model_path.")
+st.write("Ensure the YOLOv5 repository is accessible and properly formatted.")
