@@ -89,8 +89,7 @@ with col2:
 
         cap.release()
         out.release()
-        # Preview the processed video
-        st.video(output_path)
+        
         # Provide a download link for the processed video
         with open(output_path, "rb") as file:
             st.download_button(
