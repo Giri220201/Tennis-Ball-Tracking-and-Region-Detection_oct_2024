@@ -24,7 +24,7 @@ def download_model(url):
 
 # Set your model and repository paths
 repo_path = 'Giri220201/yolov5'  # GitHub repository for YOLOv5
-model_url = 'https://github.com/Giri220201/yolov5/raw/refs/heads/master/best%20(2).pt'
+model_url = 'https://github.com/Giri220201/yolov5/raw/refs/heads/master/best%20(3).pt'
 
 st.title("🎾 Tennis Game Tracking")
 
