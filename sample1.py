@@ -23,6 +23,11 @@ st.title("🎾 Tennis Game Tracking")
 st.markdown(
     """
     <style>
+    .stApp {
+        background-image: url('https://github.com/Giri220201/yolov5/blob/master/tennis.jpeg');
+        background-size: cover;
+        background-position: center;
+    }
     .stButton>button {
         background-color: #4CAF50; /* Green background */
         color: white; /* White text */
