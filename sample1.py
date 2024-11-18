@@ -15,7 +15,7 @@ import os
 repo_path = '.'  # GitHub repository for YOLOv5
 model_path = 'best (3).pt'
 model = torch.hub.load(repo_path, 'custom', path=model_path, source='local', force_reload=True)
-st.title("🎾 Tennis Game Tracking")
+
 
 # Download and load the YOLOv5 model
 
@@ -48,7 +48,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
+st.title("🎾 Tennis Game Tracking")
 # Create two columns for layout
 col1, col2 = st.columns([3, 1])
 
