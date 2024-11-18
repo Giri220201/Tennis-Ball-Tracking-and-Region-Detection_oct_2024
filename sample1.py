@@ -24,7 +24,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url('https://github.com/Giri220201/yolov5/blob/master/tennis.jpeg');
+        background-image: url('https://www.gardasee.de/sites/default/files/teaserimg/tennis_adobestock_285441870_0.jpeg');
         background-size: cover;
         background-position: center;
     }
