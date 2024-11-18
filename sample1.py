@@ -33,6 +33,13 @@ st.markdown(
         font-size: 36px;
         font-weight: bold;
     }
+     .subheader {
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 
     .stButton>button {
         background-color: #4CAF50; /* Green background */
@@ -46,6 +53,7 @@ st.markdown(
     }
     .stButton>button:hover {
         background-color: #45a049; /* Darker green on hover */
+        color: white; /* White text */
     }
     .stProgress > div > div {
         background-color: #4CAF50; /* Green progress bar */
