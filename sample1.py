@@ -32,7 +32,6 @@ st.markdown(
         color: white;
         font-size: 36px;
         font-weight: bold;
-        text-align: center;
     }
 
     .stButton>button {
