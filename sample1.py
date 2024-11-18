@@ -68,7 +68,7 @@ col1, col2 = st.columns([3, 1])
 
 # Video upload in the first column
 with col1:
-    st.subheader("Upload & Preview Video")
+    st.markdown('<h3 class="subheader">Upload & Preview Video</h3>', unsafe_allow_html=True)
     video_file = st.file_uploader("Select Input File", type=["mp4", "avi", "mov"])
     if video_file is not None:
         temp_video = tempfile.NamedTemporaryFile(delete=False)
@@ -83,7 +83,7 @@ with col1:
 
 # Download button in the second column
 with col2:
-    st.subheader("Download Processed Video")
+     st.markdown('<h3 class="subheader">Download Processed Video</h3>', unsafe_allow_html=True)
     if video_file is not None and st.button("Download Output"):
         st.write("Processing and preparing download...")
 
