@@ -83,7 +83,7 @@ with col1:
 
 # Download button in the second column
 with col2:
-     st.markdown('<h3 class="subheader">Download Processed Video</h3>', unsafe_allow_html=True)
+    st.subheader("Download Processed Video")
     if video_file is not None and st.button("Download Output"):
         st.write("Processing and preparing download...")
 
