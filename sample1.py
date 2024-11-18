@@ -28,10 +28,8 @@ st.markdown(
         background-size: cover;
         background-position: center;
     }
-    .title {
-        color: white;
-        font-size: 36px;
-        font-weight: bold;
+    h1, h2, h3, h4, h5, h6, p, label, .stMarkdown, .stTextInput>div>div>div>div>div, .stDataFrame {
+        color: white !important; /* Force all text elements to be white */
     }
 
     .stButton>button {
@@ -54,7 +52,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.markdown('<h1 class="title">🎾 Tennis Game Tracking</h1>', unsafe_allow_html=True)
+st.title("🎾 Tennis Game Tracking")
 # Create two columns for layout
 col1, col2 = st.columns([3, 1])
 
