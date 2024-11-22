@@ -24,11 +24,7 @@ st.markdown(
     """
     <style>
     
-     .title {
-        color: white;
-        font-size: 36px;
-        font-weight: bold;
-    }
+
      .subheader {
         color: white;
         font-size: 20px;
@@ -58,13 +54,13 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.markdown('<h1 class="title">🎾 Tennis Game Tracking</h1>', unsafe_allow_html=True)
+st.markdown('🎾 Tennis Game Tracking')
 # Create two columns for layout
 col1, col2 = st.columns([3, 1])
 
 # Video upload in the first column
 with col1:
-    st.markdown('<h3 class="subheader">Upload & Preview Video</h3>', unsafe_allow_html=True)
+    st.markdown('Upload & Preview Video')
     video_file = st.file_uploader("Select Input File", type=["mp4", "avi", "mov"])
     if video_file is not None:
         temp_video = tempfile.NamedTemporaryFile(delete=False)
