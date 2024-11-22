@@ -54,13 +54,13 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.markdown('🎾 Tennis Game Tracking')
+st.title('🎾 Tennis Game Tracking')
 # Create two columns for layout
 col1, col2 = st.columns([3, 1])
 
 # Video upload in the first column
 with col1:
-    st.markdown('Upload & Preview Video')
+    st.subheader('Upload & Preview Video')
     video_file = st.file_uploader("Select Input File", type=["mp4", "avi", "mov"])
     if video_file is not None:
         temp_video = tempfile.NamedTemporaryFile(delete=False)
