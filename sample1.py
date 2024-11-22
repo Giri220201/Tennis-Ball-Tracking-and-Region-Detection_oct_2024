@@ -23,11 +23,7 @@ model = torch.hub.load(repo_path, 'custom', path=model_path, source='local', for
 st.markdown(
     """
     <style>
-    .stApp {
-        background-image: url('https://www.gardasee.de/sites/default/files/teaserimg/tennis_adobestock_285441870_0.jpeg');
-        background-size: cover;
-        background-position: center;
-    }
+    
      .title {
         color: white;
         font-size: 36px;
